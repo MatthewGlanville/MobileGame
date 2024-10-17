@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +19,7 @@ public class MenuManager : MonoBehaviour
         //pS.Play();
         Debug.Log("WORK");
         //pS2.Play();
-        //StartCoroutine(delay());
+        StartCoroutine(delay());
     }
     IEnumerator delay()
     {
