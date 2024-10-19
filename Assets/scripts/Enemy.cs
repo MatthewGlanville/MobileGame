@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyManager : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float spawnTimer = 4.0f;
+    
     [SerializeField] private float speed = 3;
     [SerializeField] private float attack = 20;
-    [SerializeField] private GameObject goal;
+    public GameObject goal;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +18,21 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(0, 0, speed);
+        this.transform.Translate(-speed * Time.deltaTime, 0, 0);
+
 
     }
     void OnTriggerEnter(Collider c)
     {
         if (c.gameObject == goal)
         {
-
+            Debug.Log("wow");
+            Destroy(this.gameObject);
+            //SceneManager.LoadScene("MainMenu");
+        }
+        if (c.gameObject.tag == "trap")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

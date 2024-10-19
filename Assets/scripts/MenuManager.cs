@@ -6,8 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement; 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] ParticleSystem pS;
-    [SerializeField] ParticleSystem pS2;
+    [SerializeField] ParticleSystem pS; //buttons from https://loading.io/button/generator#top
+    [SerializeField] ParticleSystem pS2; //background from https://www.freepik.com/free-vector/red-laser-grid-cyber-newretrowave-3d-background_50065485.htm
     private float timer;
     // Start is called before the first frame update
     void Start()
@@ -16,9 +16,9 @@ public class MenuManager : MonoBehaviour
     }
     public void StartGame()
     {
-        //pS.Play();
+        pS.Play();
         Debug.Log("WORK");
-        //pS2.Play();
+        pS2.Play();
         StartCoroutine(delay());
     }
     IEnumerator delay()
