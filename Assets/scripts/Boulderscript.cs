@@ -18,11 +18,6 @@ public class Boulderscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.gyro.attitude.x > 0)
-        {
-            Debug.Log("hmm");
-        }
-
         Quaternion q = correctionQuaternion * GyroToUnity(Input.gyro.attitude) * new Quaternion(0, 1, 0, 0);
         this.gameObject.transform.Translate(-speed * Time.deltaTime, 0, q.x * strafeSpeed);
     }

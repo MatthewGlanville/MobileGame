@@ -30,4 +30,12 @@ public class GameManager : MonoBehaviour
             timer = maxTimer;
         }
     }
+    public void knockBack(float amount)
+    {
+        if (enemyClone != null)
+        {
+            Debug.Log("this is happening");
+            enemyClone.transform.Translate(new Vector3(amount,0, 0));
+        }
+    }
 }
