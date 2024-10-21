@@ -62,7 +62,6 @@ public class DragIcon : MonoBehaviour
             iconClone = Instantiate(icon, startPos, Quaternion.identity);
             iconClone.transform.SetParent(canvas.transform, false);
             draggingIcon = true;
-            Debug.Log("work");
             startPos = new Vector2(0, 0);
         }
         if (Input.touchCount > 0)
