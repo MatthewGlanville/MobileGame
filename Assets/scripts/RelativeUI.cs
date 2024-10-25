@@ -29,6 +29,7 @@ public class RelativeUI : MonoBehaviour
         //    // do same for x axis
             float y = components[i].rectTransform.transform.position.y / canvas.pixelRect.height;
             float width = components[i].rectTransform.rect.width / canvas.pixelRect.width;
+            Debug.Log(components[i].rectTransform.rect.width + " hhh");
             float height = components[i].rectTransform.rect.height / canvas.pixelRect.height;
             float[] vals = {x, y, width, height};
             transformVals[i,0] = vals[0];

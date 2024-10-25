@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject enemy;
     private GameObject enemyClone;
     private Enemy enemyScript;
+    private GameObject[] enemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,13 @@ public class GameManager : MonoBehaviour
         if (enemyClone != null)
         {
             Debug.Log("this is happening");
-            enemyClone.transform.Translate(new Vector3(amount,0, 0));
+            enemies = GameObject.FindGameObjectsWithTag("enemy");
+            foreach(GameObject opponent in enemies)
+            {
+
+                opponent.transform.Translate(new Vector3(amount, 0, 0));
+            }
         }
     }
 }
+

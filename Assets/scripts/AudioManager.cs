@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-     //inspired by https://www.youtube.com/watch?v=yWCHaTwVblk
+    //inspired by https://www.youtube.com/watch?v=yWCHaTwVblk
+    
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private AudioClip[] gameSounds;
+    [SerializeField] private AudioSource audioSource;
     // Start is called before the first frame update
     // Music by https://pixabay.com/users/darknightmares-41814886/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=206176 Jack Cartier from https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=206176
     //Sound Effect by https://pixabay.com/users/thefealdoproject-4574887/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=250480">Peter Barbaix</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=250480">Pixabay</a>
@@ -22,11 +26,15 @@ public class AudioManager : MonoBehaviour
             Load();
         }
     }
-
+    void playSound(int soundNum)
+    {
+        audioSource.PlayOneShot(gameSounds[soundNum]);
+    }
     // Update is called once per frame
     void Update()
     {
         Save();
+
     }
     public void ChangeSound()
     {
