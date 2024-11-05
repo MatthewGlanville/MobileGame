@@ -193,8 +193,123 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3d28adabd5300e4e898c5be87660536, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1039734119}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3d28adabd5300e4e898c5be87660536, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1039734118}
   m_SourcePrefab: {fileID: 100100000, guid: a3d28adabd5300e4e898c5be87660536, type: 3}
+--- !u!1 &480793305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480793311}
+  - component: {fileID: 480793310}
+  - component: {fileID: 480793309}
+  - component: {fileID: 480793308}
+  - component: {fileID: 480793307}
+  - component: {fileID: 480793306}
+  m_Layer: 0
+  m_Name: THISGAMEISSPONSOREDBYRAIDSHADOWLEGENDSTHEFREEPVPMOBILEGAMEDOWNLOADABLEONYOURPHONEDOWNLOADRAIDNOWANDGET3000SILVERANDAFREEEPICCHAMPION
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &480793306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f39956e564f31f4abb3ac730dfa2e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adLoader: {fileID: 480793309}
+  bannerAds: {fileID: 480793307}
+  interstitialAds: {fileID: 480793310}
+  rewardAds: {fileID: 480793308}
+--- !u!114 &480793307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993250d37dbde4248b185e53af02bf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Banner_Android
+  iosAdUnitId: Banner_iOS
+--- !u!114 &480793308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cde438763194841a0238ce8ed50425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Rewarded_Android
+  iosAdUnitId: Rewarded_iOS
+--- !u!114 &480793309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ed2531a79c864aa47c91438b838d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidGameId: 5724906
+  iosGameId: 5724907
+  isTesting: 1
+--- !u!114 &480793310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1f6c6df7dc05740a07feb8e99b6ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Interstitial_Android
+  iosAdUnitId: Interstitial_iOS
+--- !u!4 &480793311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480793305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 170, y: 86, z: 37204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535188895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a4184a06934433442914aa698feb4371, type: 3}
@@ -414,13 +529,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6457592, y: -0, z: -0, w: 0.76354104}
-  m_LocalPosition: {x: 170, y: 86, z: 37204}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 195, y: 86, z: 37460}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 80.445, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &967220859
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +654,59 @@ MonoBehaviour:
   canvas: {fileID: 967220862}
   components: []
   recttransform: []
+--- !u!1 &1039734116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a3d28adabd5300e4e898c5be87660536, type: 3}
+  m_PrefabInstance: {fileID: 89656880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1039734118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039734116}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.3, y: 0.3, z: 3.5}
+  m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!54 &1039734119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039734116}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1189469936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1252,10 @@ PrefabInstance:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1191818370}
+    - target: {fileID: 2466064521490709621, guid: 928bf5fd90f300b4a9d1afb4b939464f, type: 3}
+      propertyPath: adsManager
+      value: 
+      objectReference: {fileID: 480793306}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1104,3 +1276,4 @@ SceneRoots:
   - {fileID: 1894341593}
   - {fileID: 967220863}
   - {fileID: 89656880}
+  - {fileID: 480793311}

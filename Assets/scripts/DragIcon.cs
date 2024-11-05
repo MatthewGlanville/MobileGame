@@ -26,6 +26,7 @@ public class DragIcon : MonoBehaviour
     }
     float getWidth(Image i)
     {
+        i.rectTransform.GetWorldCorners(corners);
         return i.rectTransform.sizeDelta.x;
     }
     float getHeight(Image i)
@@ -86,8 +87,10 @@ public class DragIcon : MonoBehaviour
             if ((Input.touches[0].phase == TouchPhase.Ended) && (draggingIcon))
             { 
                 fingerDown = false;
-                Debug.Log(Physics.Raycast(Input.touches[0].position, -Vector3.up, out hit));
-                if (Physics.Raycast(cam.ScreenToWorldPoint(Input.touches[0].position), -Vector3.up, out hit))
+                Vector3 touchPos = new Vector3(Input.touches[0].position.x + cam.transform.position.x - Screen.width/2, 0, Input.touches[0].position.y + cam.transform.position.z-Screen.height/2);
+                //
+                Debug.Log(Physics.Raycast(touchPos, -Vector3.up, out hit));
+                if (Physics.Raycast(touchPos, -Vector3.up, out hit))
                 {
                     Debug.Log("hmm");
                     iconObjectClone = Instantiate(iconObject, hit.point, Quaternion.identity);
