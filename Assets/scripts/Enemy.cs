@@ -7,12 +7,13 @@ public class Enemy : MonoBehaviour
     
     [SerializeField] private float speed = 3;
     [SerializeField] private float attack = 20;
+    private GameManager gameManager;
     public GameObject goal;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager=Object.FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         if (c.gameObject == goal)
         {
             Debug.Log("wow");
+            gameManager.takeDmg(10);
             Destroy(this.gameObject);
             //SceneManager.LoadScene("MainMenu");
         }

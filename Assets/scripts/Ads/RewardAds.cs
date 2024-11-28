@@ -12,22 +12,15 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     // Start is called before the first frame update
     private void Awake()
     {
-#if UNITY_IOS
-adUnitId = iosUnitId;
-#elif UNITY_ANDROID
-        adUnitId = androidAdUnitId;
-#elif UNITY_EDITOR
-gameId = androidGameId;
-#endif 
     }
-    public void LoadRewardedAd()
+    public void LoadRewardedAd(string adUnitId)
     {
         Advertisement.Load(adUnitId, this);
     }
-    public void ShowRewardedAd()
+    public void ShowRewardedAd(string adUnitId)
     {
         Advertisement.Show(adUnitId, this);
-        LoadRewardedAd();
+        LoadRewardedAd(adUnitId);
     }
     // Update is called once per frame
     void Update()

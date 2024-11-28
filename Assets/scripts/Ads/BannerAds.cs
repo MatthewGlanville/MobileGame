@@ -13,16 +13,11 @@ public class BannerAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     private string adUnitId;
     private void Awake()
     {
-#if UNITY_IOS
-adUnitId = iosUnitId;
-#elif UNITY_ANDROID
-        adUnitId = androidAdUnitId;
-#elif UNITY_EDITOR
-gameId = androidGameId;
-#endif 
-        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
+
+        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+        Debug.Log(adUnitId + "rnjfjdnierfnuefui");
     }
-    public void LoadBannerAd()
+    public void LoadBannerAd(string adUnitId)
     {
         BannerLoadOptions options = new BannerLoadOptions
         {
@@ -42,7 +37,7 @@ gameId = androidGameId;
     {
         
     }
-    public void ShowBannerAd()
+    public void ShowBannerAd(string adUnitId)
     {
         BannerOptions options = new BannerOptions
         {

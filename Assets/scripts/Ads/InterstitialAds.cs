@@ -12,22 +12,16 @@ public class InterstitialAds : MonoBehaviour , IUnityAdsLoadListener, IUnityAdsS
     private string adUnitId;
     private void Awake()
     {
-#if UNITY_IOS
-adUnitId = iosUnitId;
-#elif UNITY_ANDROID
-        adUnitId = androidAdUnitId;
-#elif UNITY_EDITOR
-gameId = androidGameId;
-#endif 
+
     }
-    public void LoadInterstitalAd()
+    public void LoadInterstitalAd(string adUnitId)
     {
         Advertisement.Load(adUnitId, this);
     }
-    public void ShowInterstitialAd()
+    public void ShowInterstitialAd(string adUnitId)
     {
         Advertisement.Show(adUnitId, this);
-        LoadInterstitalAd();
+        LoadInterstitalAd(adUnitId);
     }
     // Update is called once per frame
     void Update()
