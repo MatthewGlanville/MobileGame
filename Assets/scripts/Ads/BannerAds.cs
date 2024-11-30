@@ -22,7 +22,7 @@ public class BannerAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         BannerLoadOptions options = new BannerLoadOptions
         {
             loadCallback = BannerLoaded,
-            errorCallbck = BannerLoadedError
+            errorCallback = BannerLoadedError
         };
         Debug.Log(adUnitId);
         Advertisement.Banner.Load(adUnitId, options);
