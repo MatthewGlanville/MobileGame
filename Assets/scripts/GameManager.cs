@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float health = 50;
     [SerializeField] private float maxTimer = 3.0f;
     [SerializeField] private GameObject goal;
-    [SerializeField] private AdsManager adsManager;
+   // [SerializeField] private AdsManager adsManager;
     private float gamesPlayed;
     private float timer;
     [SerializeField] private GameObject enemy;
@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
     private IEnumerator DisplayInterAd()
     {
         yield return new WaitForSeconds(2f);
-        AdsManager.adInstance.interstitialAds.ShowInterstitialAd(adsManager.getAdId(1));
+       // AdsManager.adInstance.interstitialAds.ShowInterstitialAd(adsManager.getAdId(1));
     }
     private IEnumerator DisplayBannerWithDelay()
     {
         yield return new WaitForSeconds(5f);
-        AdsManager.adInstance.bannerAds.ShowBannerAd(adsManager.getAdId(0));
+       // AdsManager.adInstance.bannerAds.ShowBannerAd(adsManager.getAdId(0));
     }
     // Update is called once per frame
     void Update()
