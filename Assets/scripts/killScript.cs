@@ -16,11 +16,12 @@ public class killScript : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "enemy")
         {
             gameManager.takeDmg(10);
+            Debug.Log("test");
         }
     }
 }
