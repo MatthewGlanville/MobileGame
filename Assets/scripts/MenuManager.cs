@@ -3,7 +3,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using CandyCoded.HapticFeedback;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] ParticleSystem pS; //buttons from https://loading.io/button/generator#top
@@ -20,14 +21,17 @@ public class MenuManager : MonoBehaviour
     {
         optionMenu.SetActive(false);
         MainMenu.SetActive(true);
+        HapticFeedback.LightFeedback();
     }
     public void mainToOptions()
     {
         optionMenu.SetActive(true);
         MainMenu.SetActive(false);
+        HapticFeedback.LightFeedback();
     }
     public void StartGame()
     {
+        HapticFeedback.LightFeedback();
         pS.Play();
         Debug.Log("WORK");
         pS2.Play();

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CandyCoded.HapticFeedback;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 50;
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
     }
     public void backToMenu()
     {
+        HapticFeedback.LightFeedback();
         SceneManager.LoadScene("MainMenu");
     }
     private void Awake()
@@ -102,8 +104,6 @@ public class GameManager : MonoBehaviour
         if (!ads && activeBanner)
         {
             AdsManager.adInstance.bannerAds.HideBannerAd();
-            activeBanner = false;
-            Debug.Log("wauwauwauwauw");
         }
         timer -= Time.deltaTime;
         if (timer <= 0)

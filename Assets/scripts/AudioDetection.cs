@@ -25,7 +25,14 @@ public class AudioDetection : MonoBehaviour //inspired by https://www.youtube.co
     }
     public float GetNoiseFromMic()
     {
-        return getNoiseFromClip(Microphone.GetPosition(Microphone.devices[0]), micClip);
+        if (Microphone.devices.Length != 0)
+        {
+            return getNoiseFromClip(Microphone.GetPosition(Microphone.devices[0]), micClip);
+        }
+        else
+        {
+            return 0.0f;
+        }
     }
     public float getNoiseFromClip(int clipPosition, AudioClip clip)
         

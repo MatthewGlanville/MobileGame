@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -817,6 +818,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!81 &963194230
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
 --- !u!1 &967220859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1081,9 @@ MonoBehaviour:
   aD: {fileID: 976596992}
   loudnessSens: 100
   threshold: 0.1
+  lowVib: 0.5
+  midVib: 1
+  highVib: 2
   gM: {fileID: 976596993}
 --- !u!1 &1039734116 stripped
 GameObject:
