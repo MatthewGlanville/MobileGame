@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
-    
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioClip boom; 
     [SerializeField] private float speed = 3;
     [SerializeField] private float attack = 20;
+    [SerializeField] private GameObject particleSystem;
     private GameManager gameManager;
     public GameObject goal;
 
@@ -30,11 +32,21 @@ public class Enemy : MonoBehaviour
             Debug.Log("wow");
             gameManager.takeDmg(10);
             Destroy(this.gameObject);
-            //SceneManager.LoadScene("MainMenu");
         }
-        if (c.gameObject.tag == "trap")
-        {
+        if (c.gameObject.CompareTag("boulder")) {
+            audio.PlayOneShot(boom);
+            Instantiate(particleSystem, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+
         }
+        if (c.gameObject.CompareTag("trap"))
+        {
+            audio.PlayOneShot(boom);
+            Instantiate(particleSystem, this.transform.position, Quaternion.identity);
+            Destroy(c.gameObject);
+            Destroy(this.gameObject);
+            
+        }
+       
     }
 }

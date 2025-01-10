@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Analytics;
 public class StoreManager : MonoBehaviour
 {
     private bool ads = true;
@@ -17,6 +17,11 @@ public class StoreManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        Analytics.initializeOnStartup = false;
+        Analytics.enabled = false;
+        PerformanceReporting.enabled = false;
+        Analytics.limitUserTracking = true;
+        Analytics.deviceStatsEnabled = false;
     }
     public void NoAds()
     {
@@ -40,7 +45,7 @@ public class StoreManager : MonoBehaviour
     }
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

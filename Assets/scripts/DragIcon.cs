@@ -8,6 +8,8 @@ public class DragIcon : MonoBehaviour
     [SerializeField] private GameObject iconObject;
     [SerializeField] private Canvas canvas;
     [SerializeField] private float extraBorder; //gives extra border so the icons are easier to drag and drop
+    [SerializeField] private string name;
+    [SerializeField] private GameManager gameManager;
     private Vector2 startPos;
     private Vector2 endPos;
     private bool fingerDown;
@@ -39,12 +41,8 @@ public class DragIcon : MonoBehaviour
         float x = i.rectTransform.transform.position.x;
         float y = i.rectTransform.transform.position.y;
         i.rectTransform.GetWorldCorners(corners);
-        Debug.Log(corners[3] + "WHY IS IT 0");
         float w = corners[3].x - corners[1].x;
         float h = corners[1].y - corners[0].y;
-        Debug.Log("you are tapping" + v.x);
-        Debug.Log("bottom border is for some reason" + w);
-        Debug.Log("top border is for some reason" + (x  + w/2));
         if ((v.x>x - w/2 && v.x< x + w/2) && (v.y > y-h/2 && v.y < y + h/2))
         {
             return true;    
@@ -60,17 +58,17 @@ public class DragIcon : MonoBehaviour
         if (!fingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             startPos = Input.touches[0].position;
-            Debug.Log("WAUGUS");
             fingerDown = true;
         }
         else if (fingerDown && Input.touchCount > 0)
         {
             endPos = Input.touches[0].position;
         }
-        if (fingerDown && Input.touchCount >0 && isInImage(icon,startPos) && !draggingIcon && this.gameObject.name == "Boulder (1)") 
+        if (fingerDown && Input.touchCount >0 && isInImage(icon,startPos) && !draggingIcon && this.gameObject.name == name) 
         {
             if (iconClone == null)
             {
+                
                 iconClone = Instantiate(icon, startPos, Quaternion.identity);
                 iconClone.transform.SetParent(canvas.transform, false);
             }
@@ -89,10 +87,10 @@ public class DragIcon : MonoBehaviour
                 fingerDown = false;
                 Vector3 touchPos = new Vector3(Input.touches[0].position.x + cam.transform.position.x - Screen.width/2, 0, Input.touches[0].position.y + cam.transform.position.z-Screen.height/2);
                 //
-                Debug.Log(Physics.Raycast(touchPos, -Vector3.up, out hit));
-                if (Physics.Raycast(touchPos, -Vector3.up, out hit))
+                Debug.Log(Physics.Raycast(cam.transform.position, -Vector3.up, out hit));
+                if (Physics.Raycast(touchPos, -Vector3.up, out hit) && gameManager.Money>=10)
                 {
-                    Debug.Log("hmm");
+                    gameManager.Money -= 10;
                     iconObjectClone = Instantiate(iconObject, hit.point, Quaternion.identity);
                 }
                 else

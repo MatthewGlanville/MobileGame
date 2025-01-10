@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1ac295ac-4d36-4a0f-8c66-d070263be215}">
+		<property name="assetPath">
+			<value>darkshadow-cyberpunk-206176.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>200.07183673469387</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7f5aa182-3d8a-4c39-a4f9-4b7247be1b86}</destination>
+		</relationship>
+	</object>
+</objects>

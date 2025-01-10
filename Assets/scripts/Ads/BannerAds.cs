@@ -15,7 +15,6 @@ public class BannerAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     {
 
         Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-        Debug.Log(adUnitId + "rnjfjdnierfnuefui");
     }
     public void LoadBannerAd(string adUnitId)
     {

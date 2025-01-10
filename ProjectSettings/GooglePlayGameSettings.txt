@@ -1,0 +1,11 @@
+lastUpgrade=20000
+proj.pluginVersion=2.0.0
+proj.AppId=351764055993
+and.BundleId=com.DefaultCompany.AntiSalesmanDefenceForce
+proj.classDir=Assets
+proj.ConstantsClassName=MobileGame.GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--Google+Play+game+services+IDs.+Save+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--app_id--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e351764055993%3c%2fstring%3e%0d%0a++%3c%21--package_name--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3ecom.DefaultCompany.AntiSalesmanDefenceForce%3c%2fstring%3e%0d%0a++%3c%21--achievement+Rolling+Death--%3e%0d%0a++%3cstring+name%3d%22achievement_rolling_death%22+translatable%3d%22false%22%3eCgkIuY-Wtp4KEAIQAQ%3c%2fstring%3e%0d%0a++%3c%21--achievement+Survivalist--%3e%0d%0a++%3cstring+name%3d%22achievement_survivalist%22+translatable%3d%22false%22%3eCgkIuY-Wtp4KEAIQAg%3c%2fstring%3e%0d%0a++%3c%21--achievement+long+term+resentment--%3e%0d%0a++%3cstring+name%3d%22achievement_long_term_resentment%22+translatable%3d%22false%22%3eCgkIuY-Wtp4KEAIQBA%3c%2fstring%3e%0d%0a++%3c%21--achievement+Scammed--%3e%0d%0a++%3cstring+name%3d%22achievement_scammed%22+translatable%3d%22false%22%3eCgkIuY-Wtp4KEAIQBQ%3c%2fstring%3e%0d%0a++%3c%21--leaderboard+Salesman-Slaying+Champions--%3e%0d%0a++%3cstring+name%3d%22leaderboard_salesmanslaying_champions%22+translatable%3d%22false%22%3eCgkIuY-Wtp4KEAIQAw%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=351764055993-4o2t9d5cq7k8rauuk9he3tculhrnltgd.apps.googleusercontent.com
+android.SetupDone=true
+App.NearbdServiceId=com.DefaultCompany.AntiSalesmanDefenceForce
+android.NearbySetupDone=true
