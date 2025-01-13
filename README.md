@@ -16,6 +16,7 @@ Drag and drop icons from the icon menu to place them in game.
 
 Tilt left and right to control the boulder object.
 Blow into the mic to knock back the enemy. 
+
 ![Screen_Recording_20250113_120310_MobileGame](https://github.com/user-attachments/assets/fe53083b-c9be-4b87-aa44-65efef2967cb)
 
 
