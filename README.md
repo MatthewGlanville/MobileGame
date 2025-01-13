@@ -13,9 +13,10 @@ Assets/scripts contains the main scripts
 Assets/scripts/ads contains the scripts for ads.
 Assets/Scenes contains the scenes for the game. 
 Assets/Sound contains the music and sound effects for the game
-Video contains the video 
-Build contains the APK and AAB files. 
-documentation can be found in GitHub https://github.com/MatthewGlanville/MobileGame
+Assets/Sprites contains the icons used to make the UI within the game. 
+Video/ contains the video 
+Build/ contains the APK and AAB files. 
+MobileDev/ contains documentation relevant to the project
 
 Controls: 
 Tap to use buttons. 
