@@ -6,10 +6,13 @@ Anti-Salesman Defence Force by Matthew Glanville.
 In a world where cybernetic salesmen run rampant trying to sell you bitcoin, only one man can stand against the endless horde of robot scammers. Build your defences, activate your traps and try to survive as long as possible against the endless robot horde. How will you defeat the robots?
 
 Project structure: 
-Assets/Animations contains anims
+Assets/Animation contains animations
 Assets/scripts contains the main scripts
 Assets/scripts/ads contains the scripts for ads.
-video in base project
+Assets/Scenes contains the scenes for the game. 
+Assets/Sound contains the music and sound effects for the game
+Video contains the video 
+Build contains the APK and AAB files. 
 documentation can be found in GitHub https://github.com/MatthewGlanville/MobileGame
 
 Controls: 
@@ -29,6 +32,6 @@ Buttons were found in https://loading.io/button/generator
 Background found in https://www.freepik.com/free-vector/red-laser-grid-cyber-newretrowave-3d-background_50065485.htm
 Microphone detection code inspired by https://www.youtube.com/watch?v=dzD0qP8viLw 
 laser grid used in icon by https://pngtree.com/freepng/blue-laser-neon-light-rectangle-effect_8542844.html at pngtree.com
-sound effects from pixabay https://pixabay.com/sound-effects/search/menu%20sfx/. credits for tracks are mentioned in code.
+sound effects from pixabay https://pixabay.com/sound-effects/search/menu%20sfx/. credits for tracks are mentioned in code in Assets/Scripts/AudioManager.cs.
 voice lines are from https://www.narakeet.com/create/robot-voice-text-to-speech.html
-Code references are within the mentioned code.
+Code references are within the mentioned code. 
