@@ -9,13 +9,21 @@ In a world where cybernetic salesmen run rampant trying to sell you bitcoin, onl
 
 Project structure: 
 Assets/Animation contains animations
+
 Assets/scripts contains the main scripts
+
 Assets/scripts/ads contains the scripts for ads.
+
 Assets/Scenes contains the scenes for the game. 
+
 Assets/Sound contains the music and sound effects for the game
+
 Assets/Sprites contains the icons used to make the UI within the game. 
+
 Video/ contains the video 
+
 Build/ contains the APK and AAB files. 
+
 MobileDev/ contains documentation relevant to the project
 
 Controls: 
