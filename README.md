@@ -1,4 +1,6 @@
-Anti-Salesman Defence Force by Matthew Glanville. 
+A![cooltext468394468911497](https://github.com/user-attachments/assets/659efecc-d83a-4e3d-bc2f-abe62eafd13b)
+
+by Matthew Glanville. 
 
 ![final-image](https://github.com/user-attachments/assets/78fb450f-50a1-4392-8d9f-a5b888cf5d37)
 
