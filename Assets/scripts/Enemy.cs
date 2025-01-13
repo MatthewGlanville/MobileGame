@@ -30,18 +30,18 @@ public class Enemy : MonoBehaviour
         if (c.gameObject == goal)
         {
             Debug.Log("wow");
-            gameManager.takeDmg(10);
+            gameManager.takeDmg(5);
             Destroy(this.gameObject);
         }
         if (c.gameObject.CompareTag("boulder")) {
-            audio.PlayOneShot(boom);
+            gameManager.explode(this.gameObject);
             Instantiate(particleSystem, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
 
         }
         if (c.gameObject.CompareTag("trap"))
         {
-            audio.PlayOneShot(boom);
+            gameManager.explode(this.gameObject);
             Instantiate(particleSystem, this.transform.position, Quaternion.identity);
             Destroy(c.gameObject);
             Destroy(this.gameObject);

@@ -9,7 +9,6 @@ public class StoreManager : MonoBehaviour
     [SerializeField] private GameObject adFailedText;
     [SerializeField] private GameObject adSuccessText;
     [SerializeField] private GameObject adsButton;
-    [SerializeField] private TMP_Text text; 
     [SerializeField] private float popupTime = 3.0f;
     private float timer; 
     public bool Ads
@@ -56,12 +55,7 @@ public class StoreManager : MonoBehaviour
     {
         if (!ads)
         {
-            text.text = "ads are off but the button thing is being weird";
             adsButton.SetActive(false);
-        }
-        else
-        {
-            text.text = "ads are on, the package is just broken for whatever reason";
         }
         if (timer > 0)
         {

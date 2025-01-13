@@ -38,7 +38,7 @@ namespace GooglePlayGames {
 
         public const string ApplicationId = "351764055993"; // Filled in automatically
         public const string IosClientId = "__IOS_CLIENTID__"; // Filled in automatically
-        public const string WebClientId = "351764055993-mk78ekj9nqihafgn805mn6o4avq0b4m4.apps.googleusercontent.com"; // Filled in automatically
+        public const string WebClientId = "351764055993-mk78ekj9nqihafgn805mn6o4avq0b4m4.apps.googleusercontent.com351764055993-mk78ekj9nqihafgn805mn6o4avq0b4m4.apps.googleusercontent.com"; // Filled in automatically
         public const string NearbyConnectionServiceId = "com.DefaultCompany.AntiSalesmanDefenceForce";
 
         public static bool ApplicationIdInitialized() {

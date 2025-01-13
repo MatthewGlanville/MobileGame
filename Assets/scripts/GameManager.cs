@@ -41,14 +41,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject enemy;
     private GameObject enemyClone;
     private Enemy enemyScript;
-    private GameObject[] enemies;
+    private List<GameObject> enemies;
     private bool gameEnded;
     private bool ads = true;
     private bool activeBanner = false;
     [SerializeField] StoreManager storeManager;
+    [SerializeField] private AudioClip boom;
     // Start is called before the first frame update
+    public void explode(GameObject enemy)
+    {
+        enemies.Remove(enemy);
+        audio.PlayOneShot(boom);
+    }
     void Start()
     {
+        enemies = new List<GameObject>();
         gameEnded = false;
         money = 50;
         audio.PlayOneShot(gameMusic);
@@ -81,9 +88,9 @@ public class GameManager : MonoBehaviour
     }
     public void takeDmg( int dmg)
     {
-        if (money >= 10)
+        if (money >= dmg)
         {
-            money -= 10;
+            money -= dmg;
         }
         health -= dmg;
         if (health < 0)
@@ -212,10 +219,11 @@ public class GameManager : MonoBehaviour
         if ((timer <= 0)&& (!gameEnded))
         {
             money += 3;
-            enemyClone = Instantiate (enemy,this.transform.position + new Vector3(0,0,UnityEngine.Random.Range(-300,300)),Quaternion.identity);
+            enemyClone = Instantiate (enemy,this.transform.position + new Vector3(0,0,UnityEngine.Random.Range(-220,220)),Quaternion.identity);
             enemyScript = enemyClone.GetComponent<Enemy>();
             enemyScript.transform.Rotate(new Vector3(0, 180, 0));
             enemyScript.goal = goal;
+            enemies.Add(enemyClone);
             timer = maxTimer;
         }
         if (livesFailedTimer > 0)
@@ -248,14 +256,13 @@ public class GameManager : MonoBehaviour
     {
         if (enemyClone != null)
         {
-            enemies = GameObject.FindGameObjectsWithTag("enemy");
             foreach(GameObject opponent in enemies)
             {
-                if (!gameEnded)
+                if (!gameEnded && opponent!=null)
                 {
                     opponent.transform.Translate(new Vector3(amount, 0, 0));
                 }
-                else
+                else if (gameEnded && opponent == null) 
                 {
                     Destroy(opponent);
                 }
